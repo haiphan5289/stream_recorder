@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Bold.ttf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFProDisplay-Medium.ttf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Face CamVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FaceCamVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="FaceCamVC" customModule="LiveStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlO-dp-F6e">
+                                <rect key="frame" x="0.0" y="44" width="390" height="800"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lXY-FB-aQQ">
+                                        <rect key="frame" x="24" y="700" width="342" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeP-hv-5Cv">
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="50"/>
+                                                <color key="backgroundColor" red="0.70588235290000001" green="0.36470588240000001" blue="0.95686274510000002" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="15"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Start Recording">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapRecord:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="J4T-SM-iIy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS0-19-Emh">
+                                                <rect key="frame" x="181" y="0.0" width="161" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="15"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTabSave:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zBN-lE-fZQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iwf-rN-qEa"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjJ-KB-QAE">
+                                        <rect key="frame" x="24" y="621" width="342" height="55"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="ugg-bv-c4e"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face Cam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3T-5j-hPN">
+                                        <rect key="frame" x="16.000000000000007" y="15.999999999999998" width="96.666666666666686" height="23.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDg-sm-1sp">
+                                        <rect key="frame" x="344" y="16" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lDg-sm-1sp" secondAttribute="height" id="c9c-Og-y4Z"/>
+                                            <constraint firstAttribute="height" constant="30" id="t55-E2-c8c"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ic_close_live"/>
+                                        <connections>
+                                            <action selector="onPressClose:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IKf-cZ-kDf"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDT-ll-5Do">
+                                        <rect key="frame" x="0.0" y="51.333333333333314" width="390" height="549.66666666666674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.98431372549019602" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rjJ-KB-QAE" firstAttribute="top" secondItem="yDT-ll-5Do" secondAttribute="bottom" constant="20" id="1YJ-Rr-BRQ"/>
+                                    <constraint firstItem="yDT-ll-5Do" firstAttribute="top" secondItem="W3T-5j-hPN" secondAttribute="bottom" constant="12" id="6RI-Vx-HXU"/>
+                                    <constraint firstItem="lXY-FB-aQQ" firstAttribute="leading" secondItem="jlO-dp-F6e" secondAttribute="leading" constant="24" id="7O1-YY-2Rt"/>
+                                    <constraint firstItem="lDg-sm-1sp" firstAttribute="top" secondItem="jlO-dp-F6e" secondAttribute="top" constant="16" id="7W1-tW-gW1"/>
+                                    <constraint firstItem="yDT-ll-5Do" firstAttribute="leading" secondItem="jlO-dp-F6e" secondAttribute="leading" id="Ade-yH-XbD"/>
+                                    <constraint firstItem="lXY-FB-aQQ" firstAttribute="top" secondItem="rjJ-KB-QAE" secondAttribute="bottom" constant="24" id="Kja-a1-6oy"/>
+                                    <constraint firstAttribute="bottom" secondItem="lXY-FB-aQQ" secondAttribute="bottom" constant="50" id="NT2-ej-f3r"/>
+                                    <constraint firstAttribute="trailing" secondItem="lXY-FB-aQQ" secondAttribute="trailing" constant="24" id="PtW-qt-vf9"/>
+                                    <constraint firstItem="rjJ-KB-QAE" firstAttribute="leading" secondItem="jlO-dp-F6e" secondAttribute="leading" constant="24" id="Shh-FS-GGn"/>
+                                    <constraint firstAttribute="trailing" secondItem="yDT-ll-5Do" secondAttribute="trailing" id="XOb-K9-rwk"/>
+                                    <constraint firstItem="W3T-5j-hPN" firstAttribute="top" secondItem="jlO-dp-F6e" secondAttribute="top" constant="16" id="ey2-Rb-2GX"/>
+                                    <constraint firstAttribute="trailing" secondItem="lDg-sm-1sp" secondAttribute="trailing" constant="16" id="nuB-px-Suu"/>
+                                    <constraint firstAttribute="trailing" secondItem="rjJ-KB-QAE" secondAttribute="trailing" constant="24" id="udF-iT-NS1"/>
+                                    <constraint firstItem="W3T-5j-hPN" firstAttribute="leading" secondItem="jlO-dp-F6e" secondAttribute="leading" constant="16" id="vwh-Sv-5LI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jlO-dp-F6e" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0OW-lw-jTw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jlO-dp-F6e" secondAttribute="trailing" id="Rs5-5t-CXR"/>
+                            <constraint firstItem="jlO-dp-F6e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="iQ6-fh-Oz7"/>
+                            <constraint firstAttribute="bottom" secondItem="jlO-dp-F6e" secondAttribute="bottom" id="ur4-77-JQE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSave" destination="bS0-19-Emh" id="CDV-RU-Nun"/>
+                        <outlet property="contentVideo" destination="rjJ-KB-QAE" id="RUA-G1-eEp"/>
+                        <outlet property="recordBtn" destination="MeP-hv-5Cv" id="Lt9-9F-0Tg"/>
+                        <outlet property="videoRecordView" destination="yDT-ll-5Do" id="m8B-as-zAI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10.769230769230768" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_close_live" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

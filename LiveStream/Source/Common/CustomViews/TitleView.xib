@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Bold.ttf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleView" customModule="LiveStream" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLabel" destination="fbq-Lb-zuS" id="NPJ-ci-lE4"/>
+                <outlet property="titleView" destination="iN0-l3-epB" id="XvE-0M-g0Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="581" height="168"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-Lb-zuS">
+                    <rect key="frame" x="16" y="68" width="419" height="32.5"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="27"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hoJ-AS-hrQ">
+                    <rect key="frame" x="445" y="54" width="120" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjl-wi-2yj">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Vjl-wi-2yj" secondAttribute="height" id="tXd-z4-dLq"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_crown_1"/>
+                            <connections>
+                                <action selector="didTapCrown:" destination="-1" eventType="touchUpInside" id="V9h-XR-xzo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwQ-r8-8VZ">
+                            <rect key="frame" x="60" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ZwQ-r8-8VZ" secondAttribute="height" multiplier="1:1" id="4VM-Wr-MPS"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_setting_1"/>
+                            <connections>
+                                <action selector="didTapSetting:" destination="-1" eventType="touchUpInside" id="HpJ-Jc-TPs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="s3Y-is-HbY"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hoJ-AS-hrQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5Nr-4W-XsU"/>
+                <constraint firstItem="hoJ-AS-hrQ" firstAttribute="leading" secondItem="fbq-Lb-zuS" secondAttribute="trailing" constant="10" id="FzZ-mn-iQx"/>
+                <constraint firstItem="fbq-Lb-zuS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Gga-3g-czA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hoJ-AS-hrQ" secondAttribute="trailing" constant="16" id="hPW-Qp-jIa"/>
+                <constraint firstItem="fbq-Lb-zuS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="upg-DT-sy7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="258.69565217391306" y="-133.92857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_crown_1" width="72" height="72"/>
+        <image name="ic_setting_1" width="72" height="72"/>
+    </resources>
+</document>

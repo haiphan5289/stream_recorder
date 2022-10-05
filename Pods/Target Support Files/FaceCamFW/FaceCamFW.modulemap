@@ -1,0 +1,6 @@
+framework module FaceCamFW {
+  umbrella header "FaceCamFW-umbrella.h"
+
+  export *
+  module * { export * }
+}

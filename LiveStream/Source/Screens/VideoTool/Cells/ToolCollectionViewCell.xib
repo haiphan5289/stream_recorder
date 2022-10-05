@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ToolCollectionViewCell" id="gTV-IL-0wX" customClass="ToolCollectionViewCell" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="310" height="66"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="546-Co-OuB">
+                        <rect key="frame" x="0.0" y="0.0" width="310" height="66"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HBL-12-9LV">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="66"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HBL-12-9LV" firstAttribute="leading" secondItem="546-Co-OuB" secondAttribute="leading" id="00T-FK-900"/>
+                            <constraint firstItem="HBL-12-9LV" firstAttribute="top" secondItem="546-Co-OuB" secondAttribute="top" id="Fa5-gm-JJg"/>
+                            <constraint firstAttribute="bottom" secondItem="HBL-12-9LV" secondAttribute="bottom" id="WjI-u7-Smu"/>
+                            <constraint firstAttribute="trailing" secondItem="HBL-12-9LV" secondAttribute="trailing" id="YSn-z5-Mbx"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="546-Co-OuB" secondAttribute="trailing" id="FTg-ap-VqL"/>
+                <constraint firstItem="546-Co-OuB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LDt-EO-8rR"/>
+                <constraint firstItem="546-Co-OuB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Oz9-Yb-DxD"/>
+                <constraint firstAttribute="bottom" secondItem="546-Co-OuB" secondAttribute="bottom" id="StM-7p-RSn"/>
+            </constraints>
+            <size key="customSize" width="310" height="66"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="16"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="iconImageView" destination="HBL-12-9LV" id="8Ba-E3-oZO"/>
+            </connections>
+            <point key="canvasLocation" x="86" y="115"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "broadcastwriter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/romiroma/BroadcastWriter.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ef52e6f09f12c60bcca8544934799a5863947a7f"
+      }
+    },
+    {
+      "identity" : "cocoalumberjack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CocoaLumberjack/CocoaLumberjack.git",
+      "state" : {
+        "revision" : "80ada1f753b0d53d9b57c465936a7c4169375002",
+        "version" : "3.7.4"
+      }
+    },
+    {
+      "identity" : "deviceguru",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/InderKumarRathore/DeviceGuru",
+      "state" : {
+        "revision" : "12216549ba48a3c201b33cac99da06e40858531c",
+        "version" : "8.0.2"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "6fe203dc33195667ce1759bf0182975e4653ba1c",
+        "version" : "1.4.4"
+      }
+    }
+  ],
+  "version" : 2
+}

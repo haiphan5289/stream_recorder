@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Medium.ttf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationBarView" customModule="LiveStream" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="4pg-HC-EOO" id="lCz-Or-sVd"/>
+                <outlet property="navigationView" destination="iN0-l3-epB" id="3cG-kU-jlJ"/>
+                <outlet property="titleLabel" destination="6m7-8z-1my" id="vtX-bj-yeV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="487" height="149"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pg-HC-EOO">
+                    <rect key="frame" x="6" y="5" width="149" height="149"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4pg-HC-EOO" secondAttribute="height" id="W6j-rx-7lx"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="ic_back_1"/>
+                    <connections>
+                        <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="7ip-qZ-9pw"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m7-8z-1my">
+                    <rect key="frame" x="220" y="67.5" width="47.5" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="20"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6m7-8z-1my" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1uK-75-qpf"/>
+                <constraint firstItem="4pg-HC-EOO" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="80p-3M-aq4"/>
+                <constraint firstItem="6m7-8z-1my" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="TFb-gj-T6H"/>
+                <constraint firstItem="4pg-HC-EOO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="6" id="kfq-16-lo3"/>
+                <constraint firstItem="4pg-HC-EOO" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="y6y-eC-0n6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="190.57971014492756" y="-140.29017857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back_1" width="72" height="72"/>
+    </resources>
+</document>

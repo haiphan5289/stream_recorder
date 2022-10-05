@@ -1,0 +1,6 @@
+framework module Pods_LiveStream {
+  umbrella header "Pods-LiveStream-umbrella.h"
+
+  export *
+  module * { export * }
+}

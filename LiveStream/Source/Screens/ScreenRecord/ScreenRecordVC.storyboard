@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Medium.ttf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Screen RecordVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ScreenRecordVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ScreenRecordVC" customModule="LiveStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2R-r0-4Bh" customClass="NavigationBarView" customModule="LiveStream" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fvV-N9-XTe"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82H-5U-g4S">
+                                <rect key="frame" x="130.5" y="254" width="153.5" height="43"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="36"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_recoder_start" translatesAutoresizingMaskIntoConstraints="NO" id="wdl-ml-QVM">
+                                <rect key="frame" x="88" y="354" width="238" height="238"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="2HR-1L-eMH"/>
+                                    <constraint firstAttribute="width" secondItem="wdl-ml-QVM" secondAttribute="height" id="hZJ-JY-Y1F"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wdl-ml-QVM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4lm-f8-0xe"/>
+                            <constraint firstItem="wdl-ml-QVM" firstAttribute="top" secondItem="82H-5U-g4S" secondAttribute="bottom" constant="57" id="KiC-ZT-CAD"/>
+                            <constraint firstItem="82H-5U-g4S" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ddB-3f-g0r"/>
+                            <constraint firstItem="S2R-r0-4Bh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kVZ-gl-Amg"/>
+                            <constraint firstItem="82H-5U-g4S" firstAttribute="top" secondItem="S2R-r0-4Bh" secondAttribute="bottom" constant="150" id="p6T-Jk-3PE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="S2R-r0-4Bh" secondAttribute="trailing" id="ucZ-3M-osx"/>
+                            <constraint firstItem="S2R-r0-4Bh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vg5-cl-DQS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationView" destination="S2R-r0-4Bh" id="Sp7-Sv-hXW"/>
+                        <outlet property="recordImageView" destination="wdl-ml-QVM" id="ewv-lp-TnJ"/>
+                        <outlet property="timeLabel" destination="82H-5U-g4S" id="BAI-9e-0rB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_recoder_start" width="238" height="238"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

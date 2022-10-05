@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Medium.ttf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParameterView" customModule="LiveStream" customModuleProvider="target">
+            <connections>
+                <outlet property="parameterLabel" destination="NhO-2f-qd7" id="FRS-vU-XUT"/>
+                <outlet property="parameterView" destination="iN0-l3-epB" id="xiG-Qd-lTl"/>
+                <outlet property="titleLabel" destination="ksF-9X-MKi" id="nqy-Lq-SI2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="461"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zdx-at-tru">
+                    <rect key="frame" x="135" y="153.5" width="168" height="154"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-JP-1SY">
+                            <rect key="frame" x="43" y="0.0" width="82" height="72"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhO-2f-qd7">
+                                    <rect key="frame" x="27" y="29" width="28.5" height="14.5"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
+                                    <color key="textColor" red="0.090196078431372548" green="0.48627450980392156" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="NhO-2f-qd7" firstAttribute="centerY" secondItem="ER8-JP-1SY" secondAttribute="centerY" id="PXz-i4-1zh"/>
+                                <constraint firstItem="NhO-2f-qd7" firstAttribute="centerX" secondItem="ER8-JP-1SY" secondAttribute="centerX" id="hZT-Hx-luV"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbE-5O-gci">
+                            <rect key="frame" x="0.0" y="82" width="168" height="72"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-9X-MKi">
+                                    <rect key="frame" x="72" y="30" width="24" height="12"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="10"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="txi-U7-EUG">
+                                    <rect key="frame" x="98" y="-6" width="43" height="86"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="txi-U7-EUG" secondAttribute="height" multiplier="3:6" id="mJV-OO-yIn"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="txi-U7-EUG" firstAttribute="leading" secondItem="ksF-9X-MKi" secondAttribute="trailing" constant="2" id="ILp-Bz-hsC"/>
+                                <constraint firstItem="txi-U7-EUG" firstAttribute="centerY" secondItem="ksF-9X-MKi" secondAttribute="centerY" constant="1" id="Jmb-qA-XLX"/>
+                                <constraint firstItem="ksF-9X-MKi" firstAttribute="centerX" secondItem="ZbE-5O-gci" secondAttribute="centerX" id="KOQ-OM-cDe"/>
+                                <constraint firstItem="txi-U7-EUG" firstAttribute="height" secondItem="ZbE-5O-gci" secondAttribute="height" multiplier="1.2" id="gxf-PO-jRS"/>
+                                <constraint firstItem="ksF-9X-MKi" firstAttribute="centerY" secondItem="ZbE-5O-gci" secondAttribute="centerY" id="t1b-Kp-vjW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Zdx-at-tru" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="20:60" id="Wb5-G2-9el"/>
+                <constraint firstItem="Zdx-at-tru" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="f5z-bM-LJA"/>
+                <constraint firstItem="Zdx-at-tru" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fRl-Tl-KUC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="155.07246376811597" y="-35.825892857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_arrow_right" width="4" height="6.5"/>
+    </resources>
+</document>

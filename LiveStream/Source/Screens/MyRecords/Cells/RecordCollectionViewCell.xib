@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecordCollectionViewCell" id="gTV-IL-0wX" customClass="RecordCollectionViewCell" customModule="LiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="211"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="156" height="211"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1P-hg-UEX">
+                        <rect key="frame" x="0.0" y="0.0" width="156" height="211"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-ka-bAe">
+                        <rect key="frame" x="12" y="12" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="dlv-ka-bAe" secondAttribute="height" id="H1y-GR-SRX"/>
+                            <constraint firstAttribute="width" constant="24" id="VUT-bC-NEY"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yma-Td-il0">
+                        <rect key="frame" x="107" y="7" width="42" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YH0-BN-2M7">
+                                <rect key="frame" x="9.5" y="4" width="23" height="12"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.054901960784313725" blue="0.054901960784313725" alpha="0.24746178633329885" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YH0-BN-2M7" firstAttribute="centerX" secondItem="yma-Td-il0" secondAttribute="centerX" id="4d8-PN-ZcS"/>
+                            <constraint firstAttribute="height" constant="20" id="JrU-Kd-FF5"/>
+                            <constraint firstItem="YH0-BN-2M7" firstAttribute="centerY" secondItem="yma-Td-il0" secondAttribute="centerY" id="VTj-HD-y4o"/>
+                            <constraint firstAttribute="width" constant="42" id="ucv-Do-AzG"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-6M-eVq">
+                        <rect key="frame" x="45" y="183" width="66" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXN-qb-aet">
+                                <rect key="frame" x="21.5" y="4" width="23" height="12"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.054901960784313725" blue="0.054901960784313725" alpha="0.25" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="66" id="5mr-Ls-EvH"/>
+                            <constraint firstAttribute="height" constant="20" id="Nyb-UT-gBO"/>
+                            <constraint firstItem="zXN-qb-aet" firstAttribute="centerX" secondItem="PIp-6M-eVq" secondAttribute="centerX" id="RMZ-IG-AXb"/>
+                            <constraint firstItem="zXN-qb-aet" firstAttribute="centerY" secondItem="PIp-6M-eVq" secondAttribute="centerY" id="wMM-Yo-NrP"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="u1P-hg-UEX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3cm-2e-E74"/>
+                <constraint firstAttribute="bottom" secondItem="PIp-6M-eVq" secondAttribute="bottom" constant="8" id="3u8-q7-MyI"/>
+                <constraint firstItem="PIp-6M-eVq" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="KmR-xD-ABX"/>
+                <constraint firstItem="u1P-hg-UEX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Lht-9G-ExE"/>
+                <constraint firstItem="dlv-ka-bAe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="WST-EH-M2e"/>
+                <constraint firstAttribute="trailing" secondItem="yma-Td-il0" secondAttribute="trailing" constant="7" id="faO-qm-tQt"/>
+                <constraint firstItem="yma-Td-il0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7" id="jM9-5D-FH0"/>
+                <constraint firstItem="dlv-ka-bAe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="kyN-cX-Uv3"/>
+                <constraint firstAttribute="trailing" secondItem="u1P-hg-UEX" secondAttribute="trailing" id="lut-b8-KR2"/>
+                <constraint firstAttribute="bottom" secondItem="u1P-hg-UEX" secondAttribute="bottom" id="pMG-94-m96"/>
+            </constraints>
+            <size key="customSize" width="156" height="211"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="7"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="checkImageView" destination="dlv-ka-bAe" id="ajH-jh-9uq"/>
+                <outlet property="dateLabel" destination="zXN-qb-aet" id="rcE-4Z-gfq"/>
+                <outlet property="durationLabel" destination="YH0-BN-2M7" id="pw6-Jh-ER2"/>
+                <outlet property="recorderImageView" destination="u1P-hg-UEX" id="gHw-o7-cNW"/>
+            </connections>
+            <point key="canvasLocation" x="214.49275362318843" y="163.72767857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_uncheck" width="24" height="24"/>
+    </resources>
+</document>
