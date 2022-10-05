@@ -24,6 +24,7 @@ target 'LiveStream' do
   pod 'DeviceGuru'
   pod 'SwiftLog'
   pod 'FaceCamFW'
+  pod 'SVProgressHUD'
 
 
 end

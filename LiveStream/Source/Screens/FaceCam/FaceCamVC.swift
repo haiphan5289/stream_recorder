@@ -1,5 +1,5 @@
 //
-//  FacecamVC.swift
+//  FaceCamVC.swift
 //  stream_recorder
 //
 //  Created by HHumorous on 14/04/2022.
@@ -13,15 +13,13 @@ import Photos
 import PixelSDK
 import SwiftOverlays
 import FaceCamFW
-
+//import SnapKit
 
 class FaceCamVC: UIViewController {
     @IBOutlet weak var videoRecordView: UIView!
     @IBOutlet weak var recordBtn: UIButton!
     @IBOutlet weak var btnSave: UIButton!
-    
     @IBOutlet weak var contentVideo: UIView!
-    
     private let videoRangeSlider: VideoRecordSlider = VideoRecordSlider()
     
     var videoURL: URL?
@@ -49,6 +47,7 @@ class FaceCamVC: UIViewController {
     }()
     var resizableFrame: CGRect?
     var isAdjustPipPos: Bool = false
+    private let loadingView: LoadingView = .loadXib()
     
 //    var cloudUtils = CloudUtilites()
     var videoRecordURL: URL?
@@ -77,6 +76,12 @@ class FaceCamVC: UIViewController {
         self.displayUI()
         self.recordButtonUI(state: 0)
         self.videoRangeSlider.delegate = self
+        
+        self.loadingView.frame = UIScreen.main.bounds
+        self.view.addSubview(loadingView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.loadingView.isHidden = true
+        }
         
     }
     
@@ -111,6 +116,7 @@ class FaceCamVC: UIViewController {
             startRecord()
         } else if sender.tag == 2 {
             stopRecord()
+            self.loadingView.isHidden = false
         } else if sender.tag == 3,
                   let fileURL = videoRecordURL {
 //            if !cloudUtils.deleteVideo(fileUrl: fileURL, from: .local) {
@@ -127,6 +133,7 @@ class FaceCamVC: UIViewController {
     }
     
     @IBAction func didTabSave(_ sender: Any) {
+        
         if let recordURL = videoRecordURL {
             PHPhotoLibrary.shared().performChanges({
                 PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: recordURL)
@@ -223,20 +230,6 @@ class FaceCamVC: UIViewController {
             DLog("SwiftApp::release connection: \(id)")
         }
     }
-    
-    // Method is called on a background thread. Move UI update code inside the main queue.
-//    func connectionStateDidChange(id: Int32, state: ConnectionStatus, status: ConnectionStatus, info: [AnyHashable:Any]!) {
-//        DispatchQueue.main.async {
-//            self.onConnectionStateChange(id: id, state: state, status: status, info: info)
-//        }
-//    }
-//
-//    func onConnectionStateChange(id: Int32, state: ConnectionState, status: ConnectionStatus, info: [AnyHashable:Any]!) {
-//        DLog("connectionStateDidChange id:\(id) state:\(state.rawValue) status:\(status.rawValue)")
-//
-//        // ignore disconnect confirmation after releaseConnection call
-//
-//    }
     
     // MARK: mp4 record
     func startRecord() {
@@ -699,7 +692,10 @@ extension FaceCamVC: StreamerFacecamManagerDelegate {
     }
     
     func videoSaved(fileUrl: URL) {
-        videoRecordURL = fileUrl
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+            self.videoRecordURL = fileUrl
+        }
 //        let dest = Settings.sharedInstance.recordStorage
 //        cloudUtils.moveVideo(fileUrl: fileUrl, to: dest)
     }

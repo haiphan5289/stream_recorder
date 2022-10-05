@@ -118,10 +118,12 @@
 		31F1792928AA34E60011F0C9 /* RecordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F1792728AA34E60011F0C9 /* RecordCollectionViewCell.xib */; };
 		31F7068C28D2E1480059455C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F7068B28D2E1480059455C /* HomeVC.swift */; };
 		8822D1DA0A0133EE5B79D9AF /* Pods_LiveStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF10F77C55348A19BF12B54 /* Pods_LiveStream.framework */; };
+		9385A2FD28EDCCE70082282D /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9385A2FC28EDCCE70082282D /* LoadingView.xib */; };
+		9385A2FF28EDCCF50082282D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385A2FE28EDCCF50082282D /* LoadingView.swift */; };
+		9385A30628EDD59E0082282D /* SettingsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385A30428EDD59E0082282D /* SettingsKeys.swift */; };
+		9385A30728EDD59E0082282D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385A30528EDD59E0082282D /* Settings.swift */; };
 		93A109E528EC85F20069408C /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A109E028EC85F10069408C /* String+Ext.swift */; };
 		93A109E628EC85F20069408C /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A109E128EC85F10069408C /* UIColor+Ext.swift */; };
-		93A109E828EC85F20069408C /* SettingsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A109E328EC85F10069408C /* SettingsKeys.swift */; };
-		93A109E928EC85F20069408C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A109E428EC85F10069408C /* Settings.swift */; };
 		93A109F028EC888F0069408C /* DeviceGuru in Frameworks */ = {isa = PBXBuildFile; productRef = 93A109EF28EC888F0069408C /* DeviceGuru */; };
 /* End PBXBuildFile section */
 
@@ -275,10 +277,12 @@
 		31F1792728AA34E60011F0C9 /* RecordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordCollectionViewCell.xib; sourceTree = "<group>"; };
 		31F7068B28D2E1480059455C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6CF10F77C55348A19BF12B54 /* Pods_LiveStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9385A2FC28EDCCE70082282D /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		9385A2FE28EDCCF50082282D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9385A30428EDD59E0082282D /* SettingsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKeys.swift; sourceTree = "<group>"; };
+		9385A30528EDD59E0082282D /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		93A109E028EC85F10069408C /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		93A109E128EC85F10069408C /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
-		93A109E328EC85F10069408C /* SettingsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsKeys.swift; sourceTree = "<group>"; };
-		93A109E428EC85F10069408C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FA5FB01967468B8CEEA28042 /* Pods-LiveStream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveStream.debug.xcconfig"; path = "Target Support Files/Pods-LiveStream/Pods-LiveStream.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -651,8 +655,9 @@
 		31954F6828D9B68100794B5C /* FaceCam */ = {
 			isa = PBXGroup;
 			children = (
-				93A109E428EC85F10069408C /* Settings.swift */,
-				93A109E328EC85F10069408C /* SettingsKeys.swift */,
+				9385A2FB28EDCCCA0082282D /* ViewLoading */,
+				9385A30528EDD59E0082282D /* Settings.swift */,
+				9385A30428EDD59E0082282D /* SettingsKeys.swift */,
 				93A109E028EC85F10069408C /* String+Ext.swift */,
 				93A109E128EC85F10069408C /* UIColor+Ext.swift */,
 				31364C3528EAAFE300E88DB3 /* FaceCamVC.swift */,
@@ -693,6 +698,15 @@
 				3174130728B373D200BAA29C /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9385A2FB28EDCCCA0082282D /* ViewLoading */ = {
+			isa = PBXGroup;
+			children = (
+				9385A2FC28EDCCE70082282D /* LoadingView.xib */,
+				9385A2FE28EDCCF50082282D /* LoadingView.swift */,
+			);
+			path = ViewLoading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -816,6 +830,7 @@
 				317412F128AF6C0100BAA29C /* SFProDisplay-Heavy.ttf in Resources */,
 				317412F228AF6C0100BAA29C /* SFProDisplay-Medium.ttf in Resources */,
 				317412F328AF6C0100BAA29C /* SFProDisplay-Regular.ttf in Resources */,
+				9385A2FD28EDCCE70082282D /* LoadingView.xib in Resources */,
 				317412F428AF6C0100BAA29C /* SFProDisplay-Semibold.ttf in Resources */,
 				31364C3828EAB00B00E88DB3 /* FaceCamVC.storyboard in Resources */,
 				317412E328AF484D00BAA29C /* ToolCollectionViewCell.xib in Resources */,
@@ -902,7 +917,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A109E928EC85F20069408C /* Settings.swift in Sources */,
+				9385A30728EDD59E0082282D /* Settings.swift in Sources */,
 				316FA3BC28A37FAD00DB6965 /* IAPHelper.swift in Sources */,
 				316FA3DC28A49C2900DB6965 /* UIImage+ext.swift in Sources */,
 				317412D128AC95E400BAA29C /* VideoPreviewVC.swift in Sources */,
@@ -923,10 +938,11 @@
 				317412DB28ACAC9300BAA29C /* InappCollectionViewCell.swift in Sources */,
 				31F1792428AA12B20011F0C9 /* UIlLable+ext.swift in Sources */,
 				31364C3628EAAFE300E88DB3 /* FaceCamVC.swift in Sources */,
-				93A109E828EC85F20069408C /* SettingsKeys.swift in Sources */,
+				9385A30628EDD59E0082282D /* SettingsKeys.swift in Sources */,
 				317412CB28AC870700BAA29C /* Model.swift in Sources */,
 				3174139C28B505BA00BAA29C /* PageControl.swift in Sources */,
 				316FA3AE28A365EA00DB6965 /* Application.swift in Sources */,
+				9385A2FF28EDCCF50082282D /* LoadingView.swift in Sources */,
 				317412E628AF4C6C00BAA29C /* RecordsVC.swift in Sources */,
 				317412E228AF484D00BAA29C /* ToolCollectionViewCell.swift in Sources */,
 				316FA3C428A39FB200DB6965 /* ParameterView.swift in Sources */,

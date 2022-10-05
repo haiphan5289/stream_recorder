@@ -496,7 +496,7 @@ public class StreamerFacecamManager: NSObject {
             delegate?.recordStateDidChange(state: cancel ? .stopByCancel : .stop, status: nil)
         }
         recordStatus = .stop
-        sessionQueue.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.stopWriting(restart: restart, cancel: cancel)
         }
     }
